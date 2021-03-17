@@ -8,10 +8,11 @@ function App() {
         <div className="App">
           <AppHeader/>
           <div className ="app-grid">
-                <TattooItem/>
-                <TattooItem/>
-                <TattooItem/>
-                <TattooItem/>
+                <TattooItem title="แขนเท่ๆ" thumbnailUrl ="/images/tattoo-01-small.jpg"/>
+                <TattooItem title="มือเท่ๆ" thumbnailUrl ="/images/tattoo-02-small.jpg"/>
+                <TattooItem title="คอเท่ๆ" thumbnailUrl ="/images/tattoo-03-small.jpg"/>
+                <TattooItem title="หลังเท่ๆ" thumbnailUrl ="/images/tattoo-04-small.jpg"/>
+                
                 
           </div>
           
