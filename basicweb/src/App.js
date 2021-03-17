@@ -1,7 +1,7 @@
-import AppHeader from './AppHeader';
+import AppHeader from './components/AppHeader';
 import './App.css';
-import TattooItem from './Tattooitem';
-import TattooPost from './TattooPost';
+import TattooItem from './components/TattooItem';
+
 function App() {
    
     return (

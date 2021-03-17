@@ -1,3 +1,4 @@
+import './TattooItem.css';
 function TattooItem() {
     return (
         <div className="tattoo-item">
