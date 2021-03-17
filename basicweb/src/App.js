@@ -1,6 +1,7 @@
 import AppHeader from './AppHeader';
 import './App.css';
 import TattooItem from './Tattooitem';
+import TattooPost from './TattooPost';
 function App() {
    
     return (
@@ -11,8 +12,9 @@ function App() {
                 <TattooItem/>
                 <TattooItem/>
                 <TattooItem/>
-                  
+                
           </div>
+          
         </div>
     );
 }
