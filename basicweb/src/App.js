@@ -11,6 +11,9 @@ function App() {
     function onTattooOpenClick(theTattoo){
         setSelectedTattoo(theTattoo);
     }
+    function onTattooCloseClick(){
+        setSelectedTattoo(null);
+    }
 
     const tattooElements = tattoos.map((tattoo,index) =>{
     return <TattooItem key={index} tattoo={tattoo} onTattooClick={onTattooOpenClick}/>;
@@ -18,7 +21,7 @@ function App() {
 
    let tattooPost = null;
    if (!!selectedTattoo){
-       tattooPost = <TattooPost tattoo = {selectedTattoo}/>
+       tattooPost = <TattooPost tattoo = {selectedTattoo} onBgClick={onTattooCloseClick}/>
 
    }
 
