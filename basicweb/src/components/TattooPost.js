@@ -1,11 +1,13 @@
 import './TattooPost.css'
-function TattooPost(){
+function TattooPost(props){
+    const{tattoo} = props;
     return(
         <div className="tattoo-post">
-            <div className="tatoo-post-bg"/>
-            <div className="tatoo-post-content"/>
-            <img src="/images/tattoo-01-large.jpg"/>
-            <h4>แมวน้อย</h4>
+        <div className="tattoo-bg" />
+        <div className="tattoo-content">
+            <img src={tattoo.thumbnailUrl}/>
+            <h4>{tattoo.title}</h4>
+        </div>
         </div>
     );
 }

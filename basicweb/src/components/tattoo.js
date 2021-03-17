@@ -19,6 +19,17 @@ const tattoos =[
     title: "หลังเท่ๆ",
     thumbnailUrl :"/images/tattoo-04-small.jpg"
                 
+},
+{
+    title: "หลังแขนเท่ๆ",
+    thumbnailUrl :"/images/tattoo-05-small.jpg"
+                
+}
+,
+{
+    title: "ข้างแขนเท่ๆ",
+    thumbnailUrl :"/images/tattoo-06-small.jpg"
+                
 }
 ];
 
