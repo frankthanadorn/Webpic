@@ -6,9 +6,12 @@ import { useState } from 'react';
 import TattooPost from './components/TattooPost';
 
 function App() {
-    const [selectedTattoo,setSelectedTattoo] = useState(tattoos[1]);
-   const tattooElements = tattoos.map((tattoo,index) =>{
-       return <TattooItem key={index} tattoo={tattoo}/>;
+    const [selectedTattoo,setSelectedTattoo] = useState(null);
+    function onTattooOpenClick(theTattoo){
+        setSelectedTattoo(theTattoo);
+    }
+    const tattooElements = tattoos.map((tattoo,index) =>{
+    return <TattooItem key={index} tattoo={tattoo}/>;
    });
 
    let tattooPost = null;
@@ -21,7 +24,7 @@ function App() {
     return (
         <div className="App">
           <AppHeader/>
-          
+          <button onClick= {() => {onTattooOpenClick(tattoos[3])}}>สักหน่อยปะหละ</button>
           <div className ="app-grid">
                 {tattooElements}
                 
