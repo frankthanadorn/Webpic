@@ -8,6 +8,9 @@ import TattooPost from './components/TattooPost';
 function App() {
     const [selectedTattoo,setSelectedTattoo] = useState(null);
    
+    const [searchText,setSearchText]=useState('');
+
+
     function onTattooOpenClick(theTattoo){
         setSelectedTattoo(theTattoo);
     }
@@ -29,7 +32,15 @@ function App() {
     return (
         <div className="App">
           <AppHeader/>
-          
+          <div className="app-search">
+              <input className="app-search-input"
+              type="text"
+              placeholder="ลองหาสักหน่อยปะหละ"
+              value={searchText}
+              onChange={(event) => {setSearchText(event.target.value)}}
+
+              />
+          </div>
           <div className ="app-grid">
                 {tattooElements}
                 
