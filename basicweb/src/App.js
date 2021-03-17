@@ -1,13 +1,11 @@
-
+import AppHeader from './AppHeader';
 import './App.css';
 
 function App() {
    
     return (
         <div className="App">
-          <header className="app-header">
-              <img className="app-header-logo" src="/images/logo.png"/>
-          </header>
+          <AppHeader/>
           <div className ="app-grid">
               <div className="tattoo-item">
                   <img src="/images/tattoo-01-small.jpg"/>
