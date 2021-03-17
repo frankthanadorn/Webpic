@@ -4,6 +4,7 @@ import TattooItem from './components/TattooItem';
 import tattoos from './components/tattoo';
 import { useState } from 'react';
 import TattooPost from './components/TattooPost';
+import AppSearch from './components/AppSearch';
 
 function App() {
     const [selectedTattoo,setSelectedTattoo] = useState(null);
@@ -18,7 +19,10 @@ function App() {
         setSelectedTattoo(null);
     }
 
-    const tattooElements = tattoos.map((tattoo,index) =>{
+
+    const tattooElements = tattoos.filter((tattoo)=> {
+        return tattoo.title.includes(searchText);
+    }).map((tattoo,index) =>{
     return <TattooItem key={index} tattoo={tattoo} onTattooClick={onTattooOpenClick}/>;
    });
 
@@ -32,15 +36,7 @@ function App() {
     return (
         <div className="App">
           <AppHeader/>
-          <div className="app-search">
-              <input className="app-search-input"
-              type="text"
-              placeholder="ลองหาสักหน่อยปะหละ"
-              value={searchText}
-              onChange={(event) => {setSearchText(event.target.value)}}
-
-              />
-          </div>
+          <AppSearch value ={searchText} onValueChange={setSearchText}/>
           <div className ="app-grid">
                 {tattooElements}
                 
